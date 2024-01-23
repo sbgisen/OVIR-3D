@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- mode: XML -*- -->
+<launch>
+  <node name="record_dataset" pkg="ovir_3d" type="save_camera_datasets.py">
+    <remap from="rgb/camera_info" to="soar/head_camera/rgb/camera_info"/>
+    <remap from="rgb/image_rect" to="soar/head_camera/rgb/image_rect"/>
+    <remap from="depth_registered/image_rect" to="soar/head_camera/depth_registered/image_rect"/>
+  </node>
+</launch>
